@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "activityName": "Deadlift",
+    "duration": 60,
+    "img": "./images/Bodybuilder-Deadlifting-Heavy-Weight.webp",
+    "areaFocused": "Back"
+  },
+  {
+    "id": 2,
+    "activityName": "Seated Incline Dumbbell Curl",
+    "duration": 70,
+    "img": "./images/A-Incline-Dumbbell-Curl-Exercise.webp",
+    "areaFocused": "Arms"
+  },
+  {
+    "id": 3,
+    "activityName": "Shrugs",
+    "duration": 50,
+    "img": "./images/Barbell-Shrug.webp",
+    "areaFocused": "Shoulders"
+  },
+  {
+    "id": 4,
+    "activityName": "Barbell Bench Press",
+    "duration": 45,
+    "img": "./images/Barbell-Bench-Press.webp",
+    "areaFocused": "Chest"
+  },
+  {
+    "id": 5,
+    "activityName": "Leg Curl",
+    "duration": 65,
+    "img": "./images/Hamstring-Leg-Curl-Back-Thigh.webp",
+    "areaFocused": "Legs"
+  },
+  {
+    "id": 6,
+    "activityName": "Barbell Ab Rollout",
+    "duration": 60,
+    "img": "./images/Ab-Rollout.webp",
+    "areaFocused": "Core"
+  },
+  {
+    "id": 7,
+    "activityName": "Rear Delt Raises",
+    "duration": 40,
+    "img": "./images/Rear-Delt-Raises.webp",
+    "areaFocused": "Shoulders"
+  },
+  {
+    "id": 8,
+    "activityName": "Dips",
+    "duration": 55,
+    "img": "./images/shoulder-dips.webp",
+    "areaFocused": "Arms"
+  },
+  {
+    "id": 9,
+    "activityName": "Cable Crossover",
+    "duration": 80,
+    "img": "./images/Cable-Crossover.webp",
+    "areaFocused": "Chest"
+  },
+  {
+    "id": 10,
+    "activityName": "Pullups",
+    "duration": 40,
+    "img": "./images/Pullups.webp",
+    "areaFocused": "Back"
+  },
+  {
+    "id": 11,
+    "activityName": "Jackknife Situp",
+    "duration": 75,
+    "img": "./images/Jack-Knife-Situp.webp",
+    "areaFocused": "Core"
+  },
+  {
+    "id": 12,
+    "activityName": "Leg Extension",
+    "duration": 50,
+    "img": "./images/Legs-Extension.webp",
+    "areaFocused": "Legs"
+  }
+]
