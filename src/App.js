@@ -8,7 +8,7 @@ function App() {
   const [activities, setActivities] = useState([]);
   const [chosenActivity, setChosenActivity] = useState([]);
   const [totalTime, setTotalTime] = useState(0);
-  const [bonusTime, setBonusTime] = useState(0);
+  const [bonusTime, setBonusTime] = useState(localStorage.getItem("bonusTime"));
 
   useEffect(() => {
     fetch("./data.json")
@@ -28,17 +28,20 @@ function App() {
     setTotalTime(timeTaken);
   };
 
-  const setBonusTimeInPage = (elem) => {
+  const setBonusTimeOnClick = (elem) => {
     const selectedBonusTime = elem.target.innerText;
-    setBonusTime(selectedBonusTime);
+    localStorage.setItem("bonusTime", selectedBonusTime);
+    setBonusTime(localStorage.getItem("bonusTime"));
   };
-
-  console.log(bonusTime);
 
   return (
     <div className="bg-teal-50 grid grid-cols-1 lg:grid-cols-4">
       <Header />
-      <SideBar totalTime={totalTime} setBonusTimeInPage={setBonusTimeInPage} />
+      <SideBar
+        totalTime={totalTime}
+        setBonusTimeOnClick={setBonusTimeOnClick}
+        bonusTime={bonusTime}
+      />
       <Activities activities={activities} chooseActivity={chooseActivity} />
     </div>
   );
