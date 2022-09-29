@@ -10,7 +10,7 @@ const UserInfo = () => {
           alt="profile"
         />
         <div>
-          <h5 className="text-lg">S. M. Saifullah</h5>
+          <h5 className="text-xl font-semibold">S. M. Saifullah</h5>
           <div className="flex gap-1 items-center">
             <img className="w-4" src="./images/location-pin.png" alt="" />
             <p className="text-xs text-zinc-400">Chattogram, Bangladesh </p>

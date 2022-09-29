@@ -1,6 +1,6 @@
 import React from "react";
 
-const Activity = ({ activity }) => {
+const Activity = ({ activity, chooseActivity }) => {
   const { activityName, duration, img, areaFocused } = activity;
 
   return (
@@ -18,7 +18,12 @@ const Activity = ({ activity }) => {
           Focused Area: <span className="font-semibold">{areaFocused}</span>
         </p>
         <div className="card-actions justify-end">
-          <button className="btn w-full btn-primary">Add To List</button>
+          <button
+            onClick={() => chooseActivity(activity)}
+            className="btn w-full btn-primary"
+          >
+            Add To List
+          </button>
         </div>
       </div>
     </div>

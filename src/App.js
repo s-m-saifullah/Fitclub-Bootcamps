@@ -6,6 +6,9 @@ import { useEffect, useState } from "react";
 
 function App() {
   const [activities, setActivities] = useState([]);
+  const [chosenActivity, setChosenActivity] = useState([]);
+  const [totalTime, setTotalTime] = useState(0);
+  const [bonusTime, setBonusTime] = useState(0);
 
   useEffect(() => {
     fetch("./data.json")
@@ -13,11 +16,30 @@ function App() {
       .then((data) => setActivities(data));
   }, []);
 
+  const chooseActivity = (selectedActivity) => {
+    const addedActivity = chosenActivity;
+    addedActivity.push(selectedActivity);
+    setChosenActivity(addedActivity);
+    const timeTaken = chosenActivity.reduce(
+      (prevTime, currentActivity) => prevTime + currentActivity.duration,
+      0
+    );
+
+    setTotalTime(timeTaken);
+  };
+
+  const setBonusTimeInPage = (elem) => {
+    const selectedBonusTime = elem.target.innerText;
+    setBonusTime(selectedBonusTime);
+  };
+
+  console.log(bonusTime);
+
   return (
-    <div className="bg-teal-50 grid grid-cols-1 lg:grid-cols-4 grid-rows-5">
+    <div className="bg-teal-50 grid grid-cols-1 lg:grid-cols-4">
       <Header />
-      <SideBar />
-      <Activities activities={activities} />
+      <SideBar totalTime={totalTime} setBonusTimeInPage={setBonusTimeInPage} />
+      <Activities activities={activities} chooseActivity={chooseActivity} />
     </div>
   );
 }
